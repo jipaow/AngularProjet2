@@ -1,0 +1,35 @@
+<!--<ng-container [ngSwitch]="appService.selectedMenu">
+
+  <mat-card *ngSwitchCase="'home'">
+    <app-home></app-home>
+  </mat-card>
+
+  <mat-card *ngSwitchCase="'skills'">
+    <app-skills></app-skills>
+  </mat-card>
+
+  <mat-card *ngSwitchCase="'experiences'">
+   <app-experiences></app-experiences>
+  </mat-card>
+
+  <mat-card *ngSwitchCase="'contact'">
+    
+    <app-contact></app-contact>
+  </mat-card>
+
+  <mat-card *ngSwitchCase="'legal'">
+    <app-legal></app-legal>
+  </mat-card>
+
+  <mat-card *ngSwitchCase="'credits'">
+   <app-credits></app-credits>
+  </mat-card>
+
+  <mat-card *ngSwitchCase="'Todo'">
+   <app-todo></app-todo>
+  </mat-card>
+
+</ng-container>-->
+<mat-card class="example-card">
+    <router-outlet></router-outlet>
+</mat-card>

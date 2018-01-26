@@ -1,0 +1,20 @@
+
+<mat-toolbar color="primary" fxLayout="column wrap" fxLayoutAlign="space-around" [style.width.%]="100" role ="header">
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon>reorder</mat-icon>
+      </button>
+      <span>ANGULAR 5</span>
+  </mat-toolbar>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink ="/"><mat-icon>home</mat-icon>HOME</button>
+  <button mat-menu-item [matMenuTriggerFor]="sousMenu" routerLink="/skills"><mat-icon>thumb_up</mat-icon>SKILLS</button>
+  <button mat-menu-item routerLink="/experiences"><mat-icon>notifications_off</mat-icon>EXPERIENCES</button>
+  <button mat-menu-item routerLink="/contact"><mat-icon>contacts</mat-icon>CONTACT</button>
+</mat-menu>
+
+<mat-menu #sousMenu="matMenu">
+    <button mat-menu-item routerLink ="/todo"><mat-icon>build</mat-icon>TODO</button>
+</mat-menu>
+
+  

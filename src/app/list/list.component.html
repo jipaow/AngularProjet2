@@ -1,0 +1,17 @@
+<ul>
+  <mat-list>
+    <mat-list-item *ngFor=" let item of listService.itemList">{{item}}
+
+      <button mat-button (click)="listService.deleteItem(item)">supprimer</button>
+      <button mat-button *ngIf="editable == false" (click)="showInput(item)">editer</button>
+      <ng-container *ngIf="editable == true">
+        <button mat-button (click)="listService.editItem(item , newItem.value); hideInput(item)">editer</button>
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder= "update" #newItem>
+        </mat-form-field>
+        
+
+      </ng-container>
+    </mat-list-item>
+  </mat-list>
+</ul>

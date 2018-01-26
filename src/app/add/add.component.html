@@ -1,0 +1,5 @@
+<mat-form-field class="example-full-width">
+    <input matInput type="text" placeholder="todo" #item>
+</mat-form-field>
+<br>
+<button mat-button (click)="listService.addItem(item.value)">Valider</button>
